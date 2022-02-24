@@ -2,11 +2,11 @@
 def main():
     file = open('a.txt', 'r')
 
-    count = 0
-    # Strips the newline character
+    header = file.readline()
+    print(header)
+
     for line in file.readlines():
-        count += 1
-        print("Line{}: {}".format(count, line.strip()))
+        print(line.strip().split(" "))
 
 
 if __name__ == '__main__':
